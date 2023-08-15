@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RealBidz - Auction Website </title>
+
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-***" crossorigin="anonymous" />
+
+  <style>
+
+  /*navigation bar start css*/
+    .navbar-custom {
+      background-color: #00008B; /* Dark Blue */
+      color: #ffffff; /* Text color */
+    }
+    .navbar-custom .navbar-nav .nav-link {
+      color: #ffffff; /* Link text color */
+    }
+
+    /*navigation bar end css*/
+
+    /*footer css code start*/
+
+    .footer {
+      background-color: #00008B; /* Dark Blue */
+      color: #ffffff; /* Text color */
+    }
+
+    .footer a{
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    /*footer css code end*/
+
+    /*slide show image code start*/
+
+    .carousel-item img {
+  filter: none;
+}
+
+.carousel-caption h3 {
+    font-size: 58px;
+  }
+
+  /*slide show image code end*/
+
+  /*auction part start css*/
+
+   .auction-list {
+      margin-top: 20px;
+    }
+
+    /*auction part end css*/
+
+     .custom-margin {
+      margin-right: 10px;}
+/*css of counting part*/
+
+      .col h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+.count {
+  width: 50px; /* Adjust the width to your desired value */
+  margin: 0 auto; /* Center the elements horizontally */
+  text-align: center;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <!--navigation bar-->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <img style="height: 40px; width: 100px;" src="images/logo2.jpg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="home_page.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Properties
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="buildings.html">Buildings</a>
+            <a class="dropdown-item" href="houses.html">Houses</a>
+          
+            <a class="dropdown-item" href="lands.html">Lands</a>
+          </div>
+
+                <li class="nav-item">
+          <a class="nav-link" href="sell_property.php">Sell property</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="contactus.php">Contact Us</a>
+        </li>
+        
+      </ul>
+    </div>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button style="background-color:white; color: black;" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+
+<!--navigation bar end-->
+
+<!-- Slide start-->
+
+<div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height:600px;" src="images/house.banner.jpg" class="d-block w-100" alt="Image 1">
+      <div class="carousel-caption">
+        <h3>Houses</h3>
+      </div>
+    </div> 
+>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-9 text-center mt-5">
+        <nav
+          aria-label="breadcrumb"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slide end-->
+
+<!--search box start-->
+
+
+<center><div style="width:1000px; background-color:darkblue; margin-top: 80px; margin-bottom: 80px; padding: 100px;" class="row align-items-center">
+
+  <h1 style="margin-bottom:20px; color:white;">Find Your Dream House</h1>
+  <div class="col">
+   
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+<option selected>Select the district</option>
+<option value="1">galle</option>
+<option value="2">kandy</option>
+<option value="3">mathara</option>
+</select>
+  </div>
+  <div class="col">
+   
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+<option selected>select the numer of floors</option>
+<option value="1">One</option>
+<option value="2">Two</option>
+<option value="3">Three</option>
+</select>
+  </div>
+  <div class="col">
+   
+<button style="width:200px; padding: 10px; background-color:white; color:black" type="button" class="btn btn-primary">Primary</button>
+  </div>
+</div></center>
+
+<!--search box end-->
+
+  <!--houses-->
+
+  <div class="container">
+    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house01.jpeg" class="card-img-top" alt="Auction Item 1">
+          <div class="card-body">
+            <h5 class="card-title">House 1</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+
+
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house02.jpeg" class="card-img-top" alt="Auction Item 2">
+          <div class="card-body">
+            <h5 class="card-title">House 2</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house03.jpeg" class="card-img-top" alt="Auction Item 3">
+          <div class="card-body">
+            <h5 class="card-title">House 3</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house04.jpeg" class="card-img-top" alt="Auction Item 1">
+          <div class="card-body">
+            <h5 class="card-title">House 4</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+
+
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house05.jpeg" class="card-img-top" alt="Auction Item 2">
+          <div class="card-body">
+            <h5 class="card-title">House 5</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house01.jpeg" class="card-img-top" alt="Auction Item 3">
+          <div class="card-body">
+            <h5 class="card-title">House 6</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house02.jpeg" class="card-img-top" alt="Auction Item 1">
+          <div class="card-body">
+            <h5 class="card-title">House 7</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+
+
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house03.jpeg" class="card-img-top" alt="Auction Item 2">
+          <div class="card-body">
+            <h5 class="card-title">House 8</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/house04.jpeg" class="card-img-top" alt="Auction Item 3">
+          <div class="card-body">
+            <h5 class="card-title">House 9</h5>
+            
+            <div class="row">
+              
+              
+              
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">Place Bid</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         
+          <ul class="list-unstyled">
+            <li>
+              <h4>Join with us</h4>
+            </li>
+            <li>
+             <h6>Real Bidz auctions<br>colombo 07 <br> Sri Lanka</h6>
+            
+            </li>
+
+
+            <li>
+
+              <h6>www.RealBidz@gmail.com</h6>
+            </li>
+            <li>
+              <h6>011-3456223<br>012-3456765</h6>
+            </li>
+            
+            
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About Us</a>
+            </li>
+            <li>
+              <a href="#!">Contact Us</a>
+            </li>
+            <li>
+              <a href="#!">Register</a>
+            </li>
+            <li>
+              <a href="#!">Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">apartment</a>
+            </li>
+            <li>
+              <a href="#!">Houses</a>
+            </li>
+            <li>
+              <a href="#!">Lands</a>
+            </li>
+            <li>
+              <a href="#!">property</a>
+            </li>
+            <li>
+              <a href="#!">sell property</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+          <ul class="list-unstyled">
+            <li>
+              
+
+            </li>
+             <a href="https://example.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <li>
+              <a href="https://example.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="https://example.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-3" style="background-color: #00005A;"> <!-- Dark Blue -->
+      © Copyright RealBidz All Right Reserved.
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+ 
+
+
+  
+
+  <title>Bootstrap Navigation Bar with Footer</title>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-***" crossorigin="anonymous">
+
+
+
+
+  <style>
+
+  /*navigation bar start css*/
+    .navbar-custom {
+      background-color: #00008B; /* Dark Blue */
+      color: #ffffff; /* Text color */
+    }
+    .navbar-custom .navbar-nav .nav-link {
+      color: #ffffff; /* Link text color */
+    }
+
+    /*navigation bar end css*/
+
+    /*footer css code start*/
+
+    .footer {
+      background-color: #00008B; /* Dark Blue */
+      color: #ffffff; /* Text color */
+    }
+
+    .footer a{
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    /*footer css code end*/
+
+    /*slide show image code start*/
+
+    .carousel-item img {
+  filter: none;
+}
+
+.carousel-caption h3 {
+    font-size: 58px;
+  }
+
+  /*slide show image code end*/
+
+  /*auction part start css*/
+
+   .auction-list {
+      margin-top: 20px;
+    }
+
+    /*auction part end css*/
+
+  </style>
+
+  <!--navigation bar-->
+  
+
+
+  <!--slide show-->
+
+
+  
+  
+  
+  
+
+<!--slide show end-->
+
+
+
+
+<!--Adding auctions-->
+
+ 
+     
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Remaining Time Countdown Scripts -->
+  <script>
+    // Set the auction end times (YYYY-MM-DD HH:MM:SS)
+    var auctionEndTime1 = '2023-07-10 00:00:00';
+    var auctionEndTime2 = '2023-07-11 00:00:00';
+    var auctionEndTime3 = '2023-07-12 00:00:00';
+
+    function updateRemainingTime1() {
+      updateRemainingTime(auctionEndTime1, 'remaining-time1');
+    }
+
+    function updateRemainingTime2() {
+      updateRemainingTime(auctionEndTime2, 'remaining-time2');
+    }
+
+    function updateRemainingTime3() {
+      updateRemainingTime(auctionEndTime3, 'remaining-time3');
+    }
+
+    function updateRemainingTime(endTime, elementId) {
+      var endTime = new Date(endTime).getTime();
+      var now = new Date().getTime();
+      var timeDifference = endTime - now;
+
+      // Calculate remaining time in days, hours, minutes, and seconds
+      var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      // Display the remaining time
+      document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+      // Update remaining time every 1 second
+      if (timeDifference > 0) {
+        setTimeout(function() {
+          updateRemainingTime(endTime, elementId);
+        }, 1000);
+      }
+    }
+
+    // Initial calls to update the remaining time
+    updateRemainingTime1();
+    updateRemainingTime2();
+    updateRemainingTime3();
+  </script>
+   
+
+  
+
+
+ <!--end adding auctions-->
+
+
+
+
+ 
+
+  <!-- Footer -->
+  
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- Code inject--><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
